@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page - nestedviewtest</title>
+
+    
+        <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+    
+    
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" href="/">nestedviewtest</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/Home/Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        
+        <main role="main" class="pb-3">
+            aaa
+            
+
+
+
+ <div id="grid123" name="grid123"></div><script>kendo.syncReady(function(){jQuery("#grid123").kendoGrid({"sortable":true,"columns":[{"title":"Item","field":"Item","filterable":{"messages":{"selectedItemsFormat":"{0} selected items"},"checkAll":false},"encoded":true},{"title":"TBD Item","width":"110px","field":"TBDItem","filterable":{"messages":{"selectedItemsFormat":"{0} selected items"},"checkAll":false},"encoded":true},{"title":"Item Type","width":"110px","field":"ItemType","filterable":{"messages":{"selectedItemsFormat":"{0} selected items"},"checkAll":false},"encoded":true},{"title":"Sourcing","width":"110px","field":"Sourcing","filterable":{"messages":{"selectedItemsFormat":"{0} selected items"},"checkAll":false},"encoded":true},{"title":"TBD Item Type","width":"110px","field":"TBDITEMType","filterable":{"messages":{"selectedItemsFormat":"{0} selected items"},"checkAll":false},"encoded":true},{"title":"Qty","width":"110px","field":"Qty","filterable":{"messages":{"selectedItemsFormat":"{0} selected items"},"checkAll":false},"encoded":true},{"title":"TBD Qty","width":"110px","field":"TBDQty","filterable":{"messages":{"selectedItemsFormat":"{0} selected items"},"checkAll":false},"encoded":true},{"title":"Description","width":"110px","field":"Description","filterable":{"messages":{"selectedItemsFormat":"{0} selected items"},"checkAll":false},"encoded":true},{"title":"Cost","width":"110px","field":"Cost","filterable":{"messages":{"selectedItemsFormat":"{0} selected items"},"checkAll":false},"encoded":true},{"title":"TBD Cost","width":"110px","field":"TBDCost","filterable":{"messages":{"selectedItemsFormat":"{0} selected items"},"checkAll":false},"encoded":true},{"title":"TBD Notes","width":"110px","field":"TBDNotes","filterable":{"messages":{"selectedItemsFormat":"{0} selected items"},"checkAll":false},"encoded":true}],"pageable":{"buttonCount":10},"scrollable":false,"dataSource":{"type":(function(){if(kendo.data.transports['aspnetmvc-ajax']){return 'aspnetmvc-ajax';} else{throw new Error('The kendo.aspnetmvc.min.js script is not included.');}})(),"transport":{"read":{"url":""},"prefix":""},"pageSize":5,"page":1,"total":0,"serverPaging":true,"serverSorting":true,"serverFiltering":true,"serverGrouping":true,"serverAggregates":true,"filter":[],"schema":{"data":"Data","total":"Total","errors":"Errors","model":{"fields":{"valveid":{"type":"number"},"valvecomponentsid":{"type":"number"},"Position":{"type":"number"},"Item":{"type":"string"},"TBDItem":{"type":"string"},"ItemType":{"type":"string"},"Sourcing":{"type":"string"},"TBDITEMType":{"type":"string"},"Qty":{"type":"number"},"TBDQty":{"type":"number","defaultValue":null},"Description":{"type":"string"},"Cost":{"type":"number","defaultValue":null},"TBDCost":{"type":"number","defaultValue":null},"TBDNotes":{"type":"string"},"UpdatedBy":{"editable":false,"type":"string"}}}}}});});</script>
+
+            aaa
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2019 - nestedviewtest - <a href="/Home/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    
+        <script src="/lib/jquery/dist/jquery.js"></script>
+        <script src="/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    
+    
+    <script src="/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0"></script>
+
+    
+</body>
+</html>
