@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+
+ @(Html.Kendo().Grid<ValvesComponentsViewModel>()
+             .Name("grid123")
+             .Columns(columns =>
+             {
+                columns.Bound(o => o.Item);
+                columns.Bound(o => o.TBDItem).Width(110);                                                                                                                                
+                columns.Bound(o => o.ItemType).Width(110);                                                                                                                
+                columns.Bound(o => o.Sourcing).Width(110);                                                                                                
+                columns.Bound(o => o.TBDITEMType).Width(110);                                                                                
+                columns.Bound(o => o.Qty).Width(110);                                                                
+                columns.Bound(o => o.TBDQty).Width(110);                                                
+                columns.Bound(o => o.Description).Width(110);                                
+                columns.Bound(o => o.Cost).Width(110);                
+                columns.Bound(o => o.TBDCost).Width(110);
+                columns.Bound(o => o.TBDNotes).Width(110);
+              
+             })
+             .DataSource(dataSource => dataSource
+                .Ajax()
+                .PageSize(5)
+                .Read(read => read.Action("GetValveComponents", "Home")))
+            .Pageable()
+            .Sortable())
