@@ -3,65 +3,66 @@ using System.ComponentModel;
 using System;
 
 namespace nestedviewtest
-{
-    public class ValvesComponentsViewModel
+{    public class ValvesViewModel
     {
-        
-        public int valveid { get;  set; }
-        public int valvecomponentsid { get;  set; }
-
-        [Display(Name = "Position")]        
+        // We removed ID field so WebApi demo works correctly
         [ScaffoldColumn(true)]
-        public int Position { get;  set; }
+        [Display(Name = "Quote Number")]
+        public string lnsalesquotationnumber
+        {
+            get;
+            set;
+        }
 
-        [Display(Name = "Item")]        
+
         [ScaffoldColumn(true)]
-        public string Item { get;  set; }
+        [Display(Name = "Model")]        
+        public string Model
+        {
+            get;
+            set;
+        }
 
-        [Display(Name = "TBD Item")]        
+        [Display(Name = "Equipment")]        
         [ScaffoldColumn(true)]
-        public string TBDItem { get;  set; }
+        public string EquipmentNumber
+        {
+            get;
+            set;
+        }
 
-
-        [Display(Name = "Item Type")]        
-        [ScaffoldColumn(true)]
-        public string ItemType { get;  set; }
-
-
-        [Display(Name = "Sourcing")]        
-        [ScaffoldColumn(true)]
-        public string Sourcing { get;  set; }
-
-
-        [Display(Name = "TBD Item Type")]        
-        [ScaffoldColumn(true)]
-        public string TBDITEMType { get;  set; }
 
         [Display(Name = "Qty")]        
         [ScaffoldColumn(true)]
-        public double Qty { get;  set; }
+        public double Qty
+        {
+            get;
+            set;
+        }
 
-        [Display(Name = "TBD Qty")]        
+        [Display(Name = "Calculated Cost")]        
         [ScaffoldColumn(true)]
-        public double? TBDQty { get;  set; }
+        public decimal? CalculatedCost
+        {
+            get;
+            set;
+        }
 
-
-        [Display(Name = "Description")]        
+        [Display(Name = "Override Cost")]        
         [ScaffoldColumn(true)]
-        public string Description { get;  set; }
+        public decimal? OverrideCost
+        {
+            get;
+            set;
+        }
 
-        [Display(Name = "Cost")]        
+        [Display(Name = "Accepted Cost")]        
         [ScaffoldColumn(true)]
-        public decimal? Cost { get;  set; }
-
-        [Display(Name = "TBD Cost")]        
-        [ScaffoldColumn(true)]
-        public decimal? TBDCost { get;  set; }
-
-
-        [Display(Name = "TBD Notes")]        
-        [ScaffoldColumn(true)]
-        public string TBDNotes { get;  set; }
-        public string UpdatedBy { get; internal set; }
+        public decimal? AcceptedCost
+        {
+            get;
+            set;
+        }
+        public int Valveid { get; internal set; }
     }
 }

@@ -5,21 +5,13 @@
 
 
 
- @(Html.Kendo().Grid<ValvesComponentsViewModel>()
+ @(Html.Kendo().Grid<ValvesViewModel>()
              .Name("grid123")
+             .Editable(e=>e.Mode(GridEditMode.InLine))
              .Columns(columns =>
              {
-                columns.Bound(o => o.Item);
-                columns.Bound(o => o.TBDItem).Width(110);                                                                                                                                
-                columns.Bound(o => o.ItemType).Width(110);                                                                                                                
-                columns.Bound(o => o.Sourcing).Width(110);                                                                                                
-                columns.Bound(o => o.TBDITEMType).Width(110);                                                                                
-                columns.Bound(o => o.Qty).Width(110);                                                                
-                columns.Bound(o => o.TBDQty).Width(110);                                                
-                columns.Bound(o => o.Description).Width(110);                                
-                columns.Bound(o => o.Cost).Width(110);                
-                columns.Bound(o => o.TBDCost).Width(110);
-                columns.Bound(o => o.TBDNotes).Width(110);
+                columns.Bound(o => o.CalculatedCost);
+              columns.Bound(o => o.Model);
               
              })
              .DataSource(dataSource => dataSource
