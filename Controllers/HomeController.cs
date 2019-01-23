@@ -33,6 +33,7 @@ namespace nestedviewtest.Controllers
             var data = new List<ValvesViewModel>();
             ValvesViewModel vcvm = new ValvesViewModel();
             vcvm.CalculatedCost=100;
+            vcvm.ValveModel="26AD";
             data.Add(vcvm);
             return Json(data.ToDataSourceResult(request));
         }

@@ -17,7 +17,8 @@ namespace nestedviewtest
 
         [ScaffoldColumn(true)]
         [Display(Name = "Model")]        
-        public string Model
+
+        public string ValveModel
         {
             get;
             set;
