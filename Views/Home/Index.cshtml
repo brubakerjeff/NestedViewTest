@@ -2,7 +2,12 @@
     ViewData["Title"] = "Home Page";
 }
 
-
+<script>
+    
+    function handler(item){
+        return true;
+    }
+</script>
 
 
  @(Html.Kendo().Grid<ValvesViewModel>()
@@ -10,13 +15,21 @@
              .Editable(e=>e.Mode(GridEditMode.InLine))
              .Columns(columns =>
              {
-                columns.Bound(o => o.CalculatedCost);
+                columns.Bound(o => o.CalculatedCost);//.Editable("handler");;
               columns.Bound(o => o.ValveModel);
               
+        columns.Command(command => { command.Edit(); command.Destroy(); }).Width(172);
              })
              .DataSource(dataSource => dataSource
                 .Ajax()
                 .PageSize(5)
-                .Read(read => read.Action("GetValveComponents", "Home")))
+                .Read(read => read.Action("GetValveComponents", "Home"))
+                .Update(update => update.Action("EditingInline_Update", "Home"))
+                .Model(x=> {
+                    x.Id(y => y.EquipmentNumber);
+                    x.Field(y => y.CalculatedCost).Editable(true);
+                    x.Field(y => y.ValveModel).Editable(false);
+                })
+                )
             .Pageable()
             .Sortable())
